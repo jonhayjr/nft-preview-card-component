@@ -1,5 +1,12 @@
+/* ================================= 
+  Import Fonts
+==================================== */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
+
+/* ================================= 
+  Base Element Styles
+==================================== */
 body {
     font-family: 'Outfit', sans-serif;
     background-color: hsl(217, 54%, 11%);
@@ -17,6 +24,10 @@ body {
 .soft-blue {
     color: hsl(215, 51%, 70%);
 }
+
+/* ================================= 
+    Base Layout Styles
+  ==================================== */
 
 .card {
     background-color: hsl(216, 50%, 16%);
@@ -141,7 +152,10 @@ hr {
     color: hsl(178, 100%, 50%);
 }
 
-@media screen and (max-width: 768px) {
+ /* ================================= 
+    Media Queries
+  ==================================== */
+@media (min-width: 768px) {
     .card-paragraph {
         width: 95%;
     }
