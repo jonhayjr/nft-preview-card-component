@@ -4,8 +4,8 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: hsl(217, 54%, 11%);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 100vh;
 }
@@ -32,14 +32,62 @@ body {
     text-align: center;
 }
 
+.card-img:active {
+    z-index: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+}
+  
+  .container:active .overlay {
+    cursor: pointer;
+    opacity: 40%;
+    background-color: hsl(178, 100%, 50%);
+  }
+
+.overlay-icon {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
 .card-heading {
+    color: hsl(0, 0%, 100%);
+}
+
+.card-heading:active {
     color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 .card-paragraph {
     color: hsl(215, 51%, 70%);
     font-size: 18px;
     line-height: 1.5;
+    width: 75%;
+    margin-bottom: 0;
 }
 
 .card-details-section {
@@ -68,7 +116,12 @@ hr {
 }
 
 .name {
-    color:hsl(0, 0%, 100%)
+    color:hsl(0, 0%, 100%);
+}
+
+.name:active{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 .avatar-img {
@@ -78,9 +131,18 @@ hr {
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center; 
+    color: hsl(0, 0%, 100%);
+    margin-top: 1rem;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: hsl(178, 100%, 50%);
+}
+
+@media screen and (max-width: 768px) {
+    .card-paragraph {
+        width: 95%;
+    }
 }
